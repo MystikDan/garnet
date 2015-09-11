@@ -1,0 +1,5 @@
+[package]
+name = "garnet"
+version = "0.1.0"
+authors = ["Dan Scannell <mystik3eb@gmail.com>, Mark Wardle <mwwardle@gmail.com>"]
+license = "BSD"
