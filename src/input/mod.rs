@@ -6,7 +6,7 @@ pub struct Interface {
 
 impl Interface {
     // this was a nall::function in ruby
-    fn onChange(&self, device: &::util::Device, group: usize, input: usize, oldValue: i16, newValue: i16) -> () {}
+    fn on_change(&self, device: &::util::Device, group: usize, input: usize, old_vlue: i16, new_value: i16) -> () {}
 
     fn driver(&self, driver: Option<&str>) -> () {
         let driver = match driver {
@@ -15,9 +15,9 @@ impl Interface {
         };
     }
 
-    fn optimalDriver(&self) -> &str {unimplemented!()}
-    fn safestDriver(&self) -> &str {unimplemented!()}
-    fn availableDrivers(&self) -> &str {unimplemented!()}
+    fn optimal_driver(&self) -> &str {unimplemented!()}
+    fn safest_driver(&self) -> &str {unimplemented!()}
+    fn available_drivers(&self) -> &str {unimplemented!()}
     fn init(&self) -> bool {unimplemented!()}
     fn term(&self) -> () {}
 

@@ -12,9 +12,9 @@ impl Interface {
         };
     }
 
-    fn optimalDriver(&self) -> &str {unimplemented!()}
-    fn safestDriver(&self) -> &str {unimplemented!()}
-    fn availableDrivers(&self) -> &str {unimplemented!()}
+    fn optimal_driver(&self) -> &str {unimplemented!()}
+    fn safest_driver(&self) -> &str {unimplemented!()}
+    fn available_drivers(&self) -> &str {unimplemented!()}
     fn init(&self) -> bool {unimplemented!()}
     fn term(&self) -> () {}
 

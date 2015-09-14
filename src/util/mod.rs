@@ -24,8 +24,8 @@ impl Group {
 
     fn find(&self, name: String) -> Option<usize> {
         self.input.iter().position(move|i: &Input|{
-            let testName = i.name.clone();
-            match testName {
+            let test_name = i.name.clone();
+            match test_name {
                 Some(n) => n == name,
                 None => false
             }
@@ -42,19 +42,19 @@ impl Group {
 
 trait DeviceTrait {
     #[inline]
-    fn isNull(&self) -> bool {
+    fn is_null(&self) -> bool {
         false
     }
     #[inline]
-    fn isKeyboard(&self) -> bool {
+    fn is_keyboard(&self) -> bool {
         false
     }
     #[inline]
-    fn isMouse(&self) -> bool {
+    fn is_mouse(&self) -> bool {
         false
     }
     #[inline]
-    fn isJoypad(&self) -> bool {
+    fn is_joypad(&self) -> bool {
         false
     }
 }
@@ -67,19 +67,19 @@ pub struct Device {
 
 impl Device {
     #[inline]
-    fn pathID(&self) -> u32 {
+    fn path_id(&self) -> u32 {
         (self.id >> 32) as u32
     }
     #[inline]
-    fn deviceID(&self) -> u32 {
+    fn device_id(&self) -> u32 {
         (self.id >> 0) as u32
     }
     #[inline]
-    fn vendorID(&self) -> u16 {
+    fn vendor_id(&self) -> u16 {
         (self.id >> 16) as u16
     }
     #[inline]
-    fn productID(&self) -> u16 {
+    fn product_id(&self) -> u16 {
         (self.id >> 0) as u16
     }
 
@@ -89,8 +89,8 @@ impl Device {
 
     fn find(&self, name: String) -> Option<usize> {
         self.group.iter().position(move|g: &Group|{
-            let testName = g.name.clone();
-            match testName {
+            let test_name = g.name.clone();
+            match test_name {
                 Some(n) => n == name,
                 None => false
             }
